@@ -10,11 +10,19 @@ export default class mainComponent extends Component {
   changeInput = (e)=> {
     this.setState ({name: e.target.value})
   }
+  submit =(e)=>{
+    e.preventDefault()
+    console.log (this.state.name)
+  }
   render() {
     return (
       <div>
-        <p>{this.state.name}</p>
-        <input onChange={this.changeInput}/>
+        <form>
+          <p>{this.state.name}</p>
+          <input onChange={this.changeInput}/>
+          <button onClick={this.submit} type='submit'>sumbit</button>
+        </form>
+        
       </div>
     )
   }
