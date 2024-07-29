@@ -1,25 +1,21 @@
 import React, { Component } from 'react'
 
-
-export default class MainComponent extends Component {
-  constructor(props){
-    super(props);
+export default class mainComponent extends Component {
+  constructor (props){
+    super(props)
     this.state = {
-      counter : 0
+      name : ""
     }
   }
-  incrementor = () => {
-    this.setState(prevState => ({
-      counter: prevState.counter + 1
-    }));
+  changeInput = (e)=> {
+    this.setState ({name: e.target.value})
   }
   render() {
     return (
       <div>
-        <p>{this.state.counter}</p>
-        <button onClick={this.incrementor}>+</button>
+        <p>{this.state.name}</p>
+        <input onChange={this.changeInput}/>
       </div>
     )
   }
 }
-
