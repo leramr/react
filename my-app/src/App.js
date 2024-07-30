@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import MyComponent from './components/mainComponent'
+import MainComponent from './components/mainComponent'
 
 
 export default class App extends Component {
 
   render (){
     return <div>
-      <MyComponent />
+      <MainComponent />
     </div>
   }
 
